@@ -27,7 +27,7 @@ This app is deployed on heroku, at <Work In Progress>
 
 Clone this repo:
 ```
-$ git clone https://github.com/isaacquek97/cvwo_assignment
+$ git clone https://github.com/qweiping31415/cvwo_assignment
 ```
 Install all dependancies:
 ```
