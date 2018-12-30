@@ -1,4 +1,4 @@
-# Todo
+# Dueet
 
 ## Introduction
 
@@ -22,7 +22,7 @@ A0136237H
 
 Clone this repo:
 ```
-$ git clone https://github.com/qweiping31415/cvwo_assignment
+$ git clone https://github.com/qweiping31415/cvwo_assignment.git
 ```
 Install all dependancies:
 ```
