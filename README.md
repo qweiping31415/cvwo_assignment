@@ -24,7 +24,7 @@ Clone this repo:
 ```
 $ git clone https://github.com/qweiping31415/cvwo_assignment.git
 ```
-Install all dependancies:
+Install all dependancies in the same directory:
 ```
 $ bundle install
 ```
