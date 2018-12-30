@@ -1,0 +1,22 @@
+<footer class="footer">
+  <small>
+    A To-Do Manager</a>
+    by <a href="http://github.com/qweiping31415">Quek Wei Ping</a> for
+    <a href = "http://www.comp.nus.edu.sg/~vwo/">CVWO</a>,
+    based on the rails tutorial guide by
+    <a href = "https://www.railstutorial.org/book">Michael Hartl</a>.
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About",   about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+    </ul>
+  </nav>
+  <br>
+
+  <br><br>
+  <p align = center>
+  <%= link_to image_tag("ICanDoIt.jpg", alt: "DeterminedBaby"),
+            'http://github.com/qweiping31415' %>
+            <br>I can do it!</p>
+</footer>
