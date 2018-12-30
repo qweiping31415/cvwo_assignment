@@ -18,11 +18,6 @@ A0136237H
 * rails 5.1.4
 * boostrap-sass 3.7.7
 
-## Deployment
-
-TO BE CONTINUED
-This app is deployed on heroku, at <Work In Progress>
-
 ## Running the app in local environment
 
 Clone this repo:
@@ -53,6 +48,6 @@ Now you can open this to-do app in your browser at http://localhost:3000/.
 ### The username and password for a sample user account:
 
 * User name: person-{X}@example.org [where X is an integer from 1 to 99 inclusive]
-* Password: password
+* Password: 123456
 
 
