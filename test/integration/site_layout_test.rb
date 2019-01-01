@@ -7,7 +7,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   end
 
   def full_title(page_title = '')
-    base_title = "To-do App"
+    base_title = "Dueet"
     if page_title.empty?
       base_title
     else
@@ -18,7 +18,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
     assert_template 'static_pages/home'
     assert_select "a[href=?]", root_path, count: 2
-    assert_select "a[href=?]", readme_path
+    #assert_select "a[href=?]", readme_path
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
     assert_select "a[href=?]", users_path
