@@ -1,18 +1,30 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 
-gem 'rails',       	'5.1.4'
-gem 'bcrypt',         	'3.1.11'
+
+gem 'rails',        '5.1.4'
+gem 'bcrypt',           '3.1.11'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'faker', 		'1.7.3'
-gem 'bootstrap-sass', 	'3.3.7'
-gem 'puma',         	'3.9.1'
-gem 'sass-rails',   	'5.0.6'
-gem 'uglifier',     	'3.2.0'
-gem 'coffee-rails', 	'4.2.2'
-gem 'jquery-rails', 	'4.3.1'
-gem 'turbolinks',   	'5.0.1'
-gem 'jbuilder',     	'2.7.0'
+gem 'faker',    '1.7.3'
+gem 'bootstrap-sass',   '3.3.7'
+gem 'puma',           '3.9.1'
+gem 'sass-rails',     '5.0.6'
+gem 'uglifier',       '3.2.0'
+gem 'coffee-rails',   '4.2.2'
+gem 'jquery-rails',   '4.3.1'
+gem 'turbolinks',     '5.0.1'
+gem 'jbuilder',       '2.7.0'
+#gem 'formtastic'
+gem 'popper_js', '~> 1.11.1'
+gem 'bootstrap', '4.0.0.alpha6'
+gem 'simple_form'
+
+
+
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
