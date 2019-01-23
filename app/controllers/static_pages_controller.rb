@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
       #@micropost  = current_user.index, not a controller instance so no index
       #@micropost_controller = Micropost.new
       #@feed_items = current_user.feed.paginate(page: params[:page])
+      @new_micropost = Micropost.new
       @micropost  = current_user.microposts
       @feed_items = Micropost.all.paginate(page: params[:page])
 

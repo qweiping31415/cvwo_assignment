@@ -21,8 +21,11 @@ Tag.create(name: "Humour")
 
 #users = User.order(:created_at).take(6)
 #10.times do
-# content = Faker::Lorem.sentence(5)
-# users.each { |user| user.microposts.create!(content: content) }
+#	content = Faker::Lorem.sentence(5)
+#	users.each do |user|
+#	  tag_list = Faker::Lorem.words(3)
+#	  user.microposts.create(content: content, tag_list: tag_list)
+#	end
 #end
 
 
