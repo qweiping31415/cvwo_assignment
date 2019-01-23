@@ -1,7 +1,7 @@
 class Micropost < ApplicationRecord
   belongs_to :user
   has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :tags, through: :taggings, :dependent => :delete_all
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 140 }
