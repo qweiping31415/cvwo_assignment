@@ -4,7 +4,9 @@ class MicropostsController < ApplicationController
 
   #try adding this first
   def index
-    params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]) : @microposts = Micropost.all
+    #params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]) : @microposts = Micropost.all
+    @microposts = current_user.microposts
+    @microposts = @microposts.tagged_with(params[:tag]) if params[:tag]
   end
   
   #try this too

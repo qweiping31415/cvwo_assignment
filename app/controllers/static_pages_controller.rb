@@ -5,9 +5,12 @@ class StaticPagesController < ApplicationController
       #@micropost  = current_user.index, not a controller instance so no index
       #@micropost_controller = Micropost.new
       #@feed_items = current_user.feed.paginate(page: params[:page])
+
+
       @new_micropost = Micropost.new
-      @micropost  = current_user.microposts
-      @feed_items = Micropost.all.paginate(page: params[:page])
+      #@micropost  = current_user.microposts
+      #@feed_items = Micropost.all.paginate(page: params[:page])
+      @feed_items = current_user.microposts.paginate(page: params[:page]) 
 
     end #just like how tags is a model method of task, feed is model method of user login
     #microposts is pluralised method ... but build seems weird

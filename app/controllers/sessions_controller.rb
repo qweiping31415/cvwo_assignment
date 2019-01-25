@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome back, #{@user.name}!"
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
       redirect_back_or root_path
+      #redirect_back_or @user
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
