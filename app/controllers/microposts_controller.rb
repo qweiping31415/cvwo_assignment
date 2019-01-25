@@ -7,6 +7,7 @@ class MicropostsController < ApplicationController
     #params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]) : @microposts = Micropost.all
     @microposts = current_user.microposts
     @microposts = @microposts.tagged_with(params[:tag]) if params[:tag]
+    #puts params.inspect
   end
   
   #try this too
