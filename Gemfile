@@ -23,7 +23,8 @@ gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 
 
-gem 'sqlite3'
+gem 'sqlite3', '1.3.13'
+#gem 'sqlite3'
 #gem 'pg'
 
 
