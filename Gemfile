@@ -4,6 +4,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-chosen'
 end
 
+ruby '2.5.1'
+
 #gem 'rails',        '5.1.4'
 gem 'rails',        '5.2.2'
 gem 'bcrypt',           '3.1.11'
