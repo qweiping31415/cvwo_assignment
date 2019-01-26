@@ -13,6 +13,11 @@ class Micropost < ApplicationRecord
     Tag.find_by!(name: name).microposts
   end
 
+	# def self.tagged_with(tag_name) 
+	# 	tag = Tag.find_by!(name: tag_name) 
+	# 	joins(:taggings).where('taggings.tag_id' => tag.id) 
+	# end 
+
   def self.tag_counts
     Tag.select('tags.*, count(taggings.tag_id) as count')
     .joins(:taggings).group('taggings.tag_id')
