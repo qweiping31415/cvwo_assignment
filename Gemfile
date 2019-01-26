@@ -23,15 +23,24 @@ gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 
 
-gem 'sqlite3', '1.3.13'
-#gem 'sqlite3'
+#gem 'sqlite3', '1.3.13'
+#gem 'sqlite3' must abstract
 #gem 'pg'
 
 
 group :development, :test do
   #gem 'sqlite3', '1.3.13'
+  gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
 end
+
+group :production do
+  #gem 'pg', '0.18.4'
+  gem 'pg'
+#  gem 'sqlite3'
+end
+
+
 
 group :development do
   gem 'web-console',           '3.5.1'
@@ -49,10 +58,7 @@ group :test do
 end
 
 
-#group :production do
-  #gem 'pg', '0.18.4'
-#  gem 'sqlite3'
-#end
+
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
