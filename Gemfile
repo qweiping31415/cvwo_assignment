@@ -24,6 +24,7 @@ gem 'simple_form'
 
 
 gem 'sqlite3'
+#gem 'pg'
 
 
 group :development, :test do
