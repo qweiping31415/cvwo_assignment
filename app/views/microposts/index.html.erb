@@ -1,4 +1,4 @@
-<h1>Filtered Micropost Page</h1>
+<h1>Filtered Tasks</h1>
 <%= will_paginate %>
   <% @current_user.microposts.each do |micropost| %>
     <p><%= truncate(micropost.content, length: 50) %></p>

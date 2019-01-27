@@ -2,35 +2,20 @@ class MicropostsController < ApplicationController
   before_action :logged_in_user, only: [:index, :show, :create, :destroy]
   before_action :correct_user,   only: :destroy
 
-  #try adding this first
+  #Filters the microposts based on whether they contain the selected tag
   def index
-    #params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]) : @microposts = Micropost.all
-    #params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]).where(user_id: current_user.id) : @microposts = current_user.microposts
     @microposts = current_user.microposts
     @microposts = @microposts.tagged_with(params[:tag]) if params[:tag]
     @microposts = @microposts.paginate(page: params[:page])
-    # @microposts = if params[:tag] 
-    #                 Micropost.tagged_with(params[:tag]).where(user_id: current_user.id) 
-    #               else  
-    #                 current_user.microposts
-    #               end  
-
-                  
-    #puts params.inspect
   end
   
-  #try this too
   def show
     @micropost = Micropost.find(params[:id])
   end
 
-  #def new
-    #@micropost = Micropost.new
-  #end
-
+  
   def create
     @micropost = current_user.microposts.build(micropost_params)
-    #micropost = Micropost.new(micropost_params)
     if @micropost.save
       flash[:success] = "Micropost created!"
       redirect_to root_url

@@ -5,18 +5,11 @@ class Micropost < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 140 }
-  #attr_accessor :tag_list
-
 
 
   def self.tagged_with(name)
     Tag.find_by!(name: name).microposts
   end
-
-	# def self.tagged_with(tag_name) 
-	# 	tag = Tag.find_by!(name: tag_name) 
-	# 	joins(:taggings).where('taggings.tag_id' => tag.id) 
-	# end 
 
   def self.tag_counts
     Tag.select('tags.*, count(taggings.tag_id) as count')
