@@ -14,6 +14,8 @@ class MicropostsController < ApplicationController
     #               else  
     #                 current_user.microposts
     #               end  
+
+                  
     #puts params.inspect
   end
   

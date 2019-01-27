@@ -24,7 +24,7 @@ gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 
-
+gem 'rb-readline'
 #gem 'sqlite3', '1.3.13'
 #gem 'sqlite3' must abstract
 #gem 'pg'
