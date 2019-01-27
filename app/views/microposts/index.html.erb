@@ -1,5 +1,5 @@
 <h1>Filtered Micropost Page</h1>
-<div class = "col-md-8 offset-2">
+<%= will_paginate %>
   <% @current_user.microposts.each do |micropost| %>
     <p><%= truncate(micropost.content, length: 50) %></p>
     <p><small>Tags: <%= raw micropost.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
@@ -11,4 +11,4 @@
 		</span>
 		<br><br>
 	<% end %>
-</div>
+<%= will_paginate %>

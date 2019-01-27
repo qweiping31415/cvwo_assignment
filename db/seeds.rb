@@ -18,7 +18,7 @@ end
 
 
 users = User.order(:created_at).take(6)
-10.times do
+100.times do
 
 	content = Faker::Lorem.sentence(5)
 	users.each do |user|
@@ -30,6 +30,13 @@ users = User.order(:created_at).take(6)
 	  user.microposts.create(content: content, tag_list: tag_list)
 	end
 end
+
+Tag.create(name: "tag1")
+Tag.create(name: "tag2")
+Tag.create(name: "tag3")
+Tag.create(name: "tag4")
+
+
 
 
 

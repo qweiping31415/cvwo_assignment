@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
     #params[:tag] ? @microposts = Micropost.tagged_with(params[:tag]).where(user_id: current_user.id) : @microposts = current_user.microposts
     @microposts = current_user.microposts
     @microposts = @microposts.tagged_with(params[:tag]) if params[:tag]
-
+    @microposts = @microposts.paginate(page: params[:page])
     # @microposts = if params[:tag] 
     #                 Micropost.tagged_with(params[:tag]).where(user_id: current_user.id) 
     #               else  
