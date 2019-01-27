@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_01_21_150135) do
 
-  create_table "microposts", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "microposts", id: :serial, force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 2019_01_21_150135) do
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.integer "tag_id"
-    t.integer "micropost_id"
+    t.bigint "tag_id"
+    t.bigint "micropost_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["micropost_id"], name: "index_taggings_on_micropost_id"
@@ -47,4 +50,7 @@ ActiveRecord::Schema.define(version: 2019_01_21_150135) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "microposts", "users"
+  add_foreign_key "taggings", "microposts"
+  add_foreign_key "taggings", "tags"
 end

@@ -27,19 +27,18 @@ gem 'simple_form'
 gem 'rb-readline'
 #gem 'sqlite3', '1.3.13'
 #gem 'sqlite3' must abstract
-#gem 'pg'
+gem 'pg'
 
 
 group :development, :test do
   #gem 'sqlite3', '1.3.13'
-  gem 'sqlite3'
+  #gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
 group :production do
   #gem 'pg', '0.18.4'
-  gem 'pg'
-#  gem 'sqlite3'
+  #gem 'pg'
 end
 
 
