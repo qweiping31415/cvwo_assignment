@@ -15,8 +15,11 @@ A0136237H
 ## Versions
 
 * ruby 2.5.1
-* rails 5.1.4
+* rails 5.2.2
 * boostrap-sass 3.7.7
+
+## Deployment
+This application is deployed at https://arcane-depths-69465.herokuapp.com
 
 ## Running the app in local environment
 
