@@ -20,7 +20,7 @@ gem 'will_paginate',           '3.1.6'
 gem 'faker',    '1.7.3'
 
 # Use Puma as the app server
-gem 'puma',           '3.9.1'
+gem 'puma',           '3.12.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'sass-rails',     '5.0.6'
 
