@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A To-do list created with Ruby on Rails, for CVWO AY2018/19 holiday assignment.
+A To-do list created with Ruby on Rails, for CVWO AY2019/20 holiday assignment.
 
 ### Name
 
